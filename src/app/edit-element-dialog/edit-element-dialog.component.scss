@@ -1,0 +1,34 @@
+.mat-dialog-container {
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-right: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #3f51b5;
+  color: white !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #303f9f;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.cancel-button {
+  background-color: #f44336;
+  &:hover {
+    background-color: #d32f2f;
+  }
+}
