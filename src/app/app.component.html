@@ -5,7 +5,11 @@
     </mat-form-field>
 </div>
 
-<table mat-table [dataSource]="(dataSource$ | async) || []" class="mat-elevation-z8">
+<div *ngIf="state.select('isLoading') | async" class="loader">
+    Loading...
+</div>
+
+<table *ngIf="!(state.select('isLoading') | async)" mat-table [dataSource]="(state.select('filteredElements') | async) || []" class="mat-elevation-z8">
 
     <ng-container matColumnDef="position">
         <th mat-header-cell *matHeaderCellDef> No. </th>
